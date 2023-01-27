@@ -1,6 +1,6 @@
 const Timer = () => {
     return (
-        <div></div>
+        <h1>00:00:00.0</h1>
     );
 };
 

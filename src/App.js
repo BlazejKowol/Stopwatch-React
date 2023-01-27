@@ -1,15 +1,13 @@
-import styles from './components/Button/Button.module.scss';
+import Button from './components/Button/Button';
+import Container from './components/Container/Container';
+import Timer from './components/Timer/Timer';
 
 const App = () => {
   return (
-    <div>
-      <h1>00:00:00.0</h1> {/*tu będzie komponent Timer */}
-      <container> {/*tu będzie komponent ze wszystkimi buttonami */}
-        <button className={styles.button}>Start</button>
-        <button className={styles.button}>Stop</button>
-        <button className={styles.button}>Reset</button>
-      </container>
-    </div>
+    <Container>
+      <Timer />
+      <Button />
+    </Container>
   );
 }
 
