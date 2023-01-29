@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Button from "../Button/Button";
 import { useState } from "react";
 import TimerFunction from "../TimerFunction/TimerFunction";
+import styles from './Timer.module.scss';
 
 const Timer = () => {
 
@@ -24,9 +25,11 @@ const Timer = () => {
     return (
         <div>
             <TimerFunction time={clock} />
-            <Button onClick={() => handleStart(true)}>Start</Button>
-            <Button onClick={() => handleStart(false)}>Stop</Button>
-            <Button onClick={() => handleClock(0)}>Reset</Button>
+            <div className={styles.row}>
+                <Button onClick={() => handleStart(true)}>Start</Button>
+                <Button onClick={() => handleStart(false)}>Stop</Button>
+                <Button onClick={() => handleClock(0)}>Reset</Button>
+            </div>    
         </div>
     );
 };
